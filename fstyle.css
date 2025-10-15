@@ -1,0 +1,122 @@
+/* Reset some basic styles */
+body, h1, h2, form, input, select, label, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background: #333;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background: #fff;
+    color: #333;
+    border-radius: 5px;
+}
+
+main {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.fbody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fbody div {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+
+select {
+    width: calc(100% - 20px);
+    padding: 0.5rem;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input:focus, select:focus {
+    border-color: #fda085;
+}
+
+input[type="submit"], input[type="reset"] {
+    width: auto;
+    background: #fda085;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background: #f6d365;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #3f7dc4;
+}
+
+input[type="submit"], input[type="reset"] {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
